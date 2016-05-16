@@ -1,0 +1,33 @@
+{
+  "name": "eventsourced",
+  "version": "1.0.0",
+  "description": "An Event Sourcing library for Node",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "tap -R spec lib/**/*.spec.js",
+    "test:watch": "nodemon -q --exec 'npm t'"
+  },
+  "keywords": [
+    "event",
+    "source",
+    "immutable"
+  ],
+  "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
+  "license": "MIT",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "immutablediff": "^0.4.2",
+    "immutablepatch": "^0.2.2",
+    "nlp_compromise": "^4.10.5"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "nodemon": "^1.9.2",
+    "tap": "^5.7.1"
+  }
+}

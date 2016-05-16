@@ -6,6 +6,10 @@
   "directories": {
     "doc": "docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lgomez/eventsourced.git"
+  },
   "scripts": {
     "test": "tap -R spec lib/**/*.spec.js",
     "test:watch": "nodemon -q --exec 'npm t'"

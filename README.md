@@ -70,16 +70,8 @@ a.save(); // Sets foo to bar, changes state, emits saved event.
 a.touch(); // Does nothing, does not emit event.
 ```
 
-## Testing
+## Scripts
 
-One-off tests can be run as usual:
-
-```bash
-npm test
-```
-
-Or you can use `npm start` to continuously run tests on every change.
-
-```bash
-npm start
-```
+* `npm test` to run one-off tests.
+* `npm start` to continuously run tests on every change.
+* `npm run cov` to see test coverage report.

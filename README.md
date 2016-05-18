@@ -25,7 +25,7 @@ npm i eventsourced
 * When a command is executed, if it changes state and returns null or undefined, it triggers emission of its corresponding event.
 * Events are immutable.
 * Event names are in past tense.
-* This library uses NLP to compute the past tense of a command. **We are considering allowing overrides to `command<->event` mappings.**
+* This library uses NLP to compute the past tense of a command. **Note:** We are considering allowing overrides to `command<->event` mappings.
 * This library automatically registers defined methods and emits the appropriate event (in past tense) for the command.
 * We use JS Symbols to hide internal functionality. To inspect an instance use `Entity.inspect(<instance>);`.
 
@@ -36,7 +36,8 @@ var Entity = require('eventsourced');
 
 class MyEntity extends Entity {
   /**
-   * Commands change state and return undefined or null.
+   * Commands change state
+   * and return undefined or null.
    */
   rename(name) {
     this.name = name;
@@ -46,13 +47,17 @@ class MyEntity extends Entity {
     return null;
   }
   /**
-   * A command that does not change state does not cause an event to be emitted.
-   * It is considered to be a query and not a command.
+   * A command that does not change
+   * state does not cause an event
+   * to be emitted. It is considered
+   * to be a query and not a command.
    */
   touch() {
   }
   /**
-   * A query method does return something but does not change state.
+   * A query method does return
+   * something but does not change
+   * state.
    */
   myQuery() {
     return {
@@ -65,9 +70,24 @@ class MyEntity extends Entity {
 
 const entity = new MyEntity();
 
-a.rename('Daniel'); // Sets name to Daniel, changes state, emits renamed event.
-a.save(); // Sets foo to bar, changes state, emits saved event.
-a.touch(); // Does nothing, does not emit event.
+/**
+ * Sets name to Daniel,
+ * changes state, emits
+ * renamed event.
+ */
+a.rename('Daniel');
+
+/**
+ * Sets foo to bar, changes
+ * state, emits saved event.
+ */
+a.save();
+
+/**
+ * Does nothing, does not
+ * emit event.
+ */
+a.touch();
 ```
 
 ## Scripts

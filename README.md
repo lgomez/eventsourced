@@ -2,28 +2,6 @@
 
 An Event Sourcing library for Node using ES6, Immutable, NLP and some CQRS.
 
-Work in progress. For now, see [lib/entity/entity.spec.js](lib/entity/entity.spec.js) to get an idea of what it does.
+Combining Event Sourcing and CQRS concepts in one Entity class for node using ES6 Symbols, Proxies, Immutable and Event Emitter. One of my main goals with the Entity class is to create instances that are as clean as possible and allow users to set and get attributes as they normally would in JavaScript while automatically maintaining state, event history, etc.
 
-With this small library I'm aiming to provide an easy way to implement event sourced entities in Node. My goal is to be able to do something like this:
-
-```javascript
-class MyEntity extends Entity {
-  save() {}
-  delete() {}
-}
-
-// Get some events from some sort of store...
-const events = [
-  { event: 'saved', patch: { op: "save", path: "/name", value: "Luis" } },
-];
-
-// Create an instance with those events... Or none.
-const instance = new MyEntity(events); // Instance is created applying events.
-
-assert(instance.name === "Luis"); // State should reflect the state up to the last event.
-
-instance.nickname = "luisgo"; // Instance can be manipulated as usual
-
-const instance.save(); // emit 'saved' event with immutable event data.
-const instance.delete(); // emit 'deleted' event with immutable data.
-```
+This is very much a work in progress and not ready for use. For now, see [lib/entity/entity.spec.js](lib/entity/entity.spec.js) to get an idea of what it does.

@@ -1,6 +1,6 @@
 {
   "name": "eventsourced",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An Event Sourcing library for Node",
   "main": "index.js",
   "directories": {
@@ -24,7 +24,9 @@
     "immutable",
     "cqrs"
   ],
-  "engines": { "node": ">=6.0.0" },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
   "license": "MIT",
   "dependencies": {

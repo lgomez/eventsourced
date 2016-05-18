@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "tap -R spec lib/**/*.spec.js",
+    "cov": "npm t -- -R classic --cov",
     "start": "nodemon -q --exec 'npm t'",
     "preversion": "eslint . && npm t",
     "postversion": "git push && git push --tags && npm publish"

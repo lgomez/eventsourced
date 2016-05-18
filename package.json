@@ -1,6 +1,6 @@
 {
   "name": "eventsourced",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An Event Sourcing library for Node",
   "main": "index.js",
   "directories": {

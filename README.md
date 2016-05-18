@@ -18,6 +18,16 @@ This is very much a work in progress and not ready for use. For now, see [lib/en
 ```bash
 npm i eventsourced
 ```
+## Notes
+
+* Commands change state and return `undefined` or `null`.
+* Queries return query results and **do not** change state.
+* When a command is executed, if it changes state and returns null or undefined, it triggers emission of its corresponding event.
+* Events are immutable.
+* Event names are in past tense.
+* This library uses NLP to compute the past tense of a command. **We are considering allowing overrides to `command<->event` mappings.**
+* This library automatically registers defined methods and emits the appropriate event (in past tense) for the command.
+* We use JS Symbols to hide internal functionality. To inspect an instance use `Entity.inspect(<instance>);`.
 
 ## Usage
 

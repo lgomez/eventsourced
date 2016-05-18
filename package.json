@@ -15,9 +15,12 @@
     "start": "nodemon -q --exec 'npm t'"
   },
   "keywords": [
+    "event sourcing",
     "event",
     "source",
-    "immutable"
+    "sourcing",
+    "immutable",
+    "cqrs"
   ],
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
   "license": "MIT",

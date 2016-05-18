@@ -24,6 +24,7 @@
     "immutable",
     "cqrs"
   ],
+  "engines": { "node": ">=6.0.0" },
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
   "license": "MIT",
   "dependencies": {

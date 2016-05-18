@@ -36,15 +36,6 @@ var Entity = require('eventsourced');
 
 class MyEntity extends Entity {
   /**
-   * The constructor is required now but will be removed because it makes no
-   * sense in an event sourced entity.
-   */
-  constructor(events, options) {
-    super(events, options);
-    this.name = 'Luis';
-    this.email = 'lgomez@example.com';
-  }
-  /**
    * Commands change state and return undefined or null.
    */
   rename(name) {

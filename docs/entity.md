@@ -15,6 +15,34 @@ as possible and allow users to set and get attributes as they normally would
 in JavaScript while automatically maintaining state, event history, etc. This
 is why we use Symbols to store internals.
 
+**Parameters**
+
+-   `events` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** One or more events to apply to the entity.
+-   `config` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Entity configuration object.
+    -   `config.mappings` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** `command<->event` mapping overrides.
+
+**Examples**
+
+```javascript
+class TestEntity extends Entity {
+ rename(name) {
+   this.name = name;
+ }
+ save() {
+   this.foo = 'bar';
+ }
+ touch() {
+ }
+ myQuery() {
+   return {
+     type: 'query response',
+     name: this.name,
+     email: this.email,
+   };
+ }
+}
+```
+
 ## apply
 
 Apply an event to the entity.

@@ -1,7 +1,10 @@
 # Event Sourced
 
+[![npm version](https://badge.fury.io/js/eventsourced.svg)](https://badge.fury.io/js/eventsourced)
 [![Build Status](https://travis-ci.org/lgomez/eventsourced.svg?branch=master)](https://travis-ci.org/lgomez/eventsourced)
 [![Coverage Status](https://coveralls.io/repos/github/lgomez/eventsourced/badge.svg?branch=master)](https://coveralls.io/github/lgomez/eventsourced?branch=master)
+[![Dependency Status](https://david-dm.org/lgomez/eventsourced.svg)](https://david-dm.org/lgomez/eventsourced)
+[![GitHub issues](https://img.shields.io/github/issues/lgomez/eventsourced.svg)](https://github.com/lgomez/eventsourced/issues)
 
 An Event Sourcing library for Node using ES6, Immutable, NLP and some CQRS.
 

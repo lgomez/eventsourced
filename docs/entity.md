@@ -1,5 +1,7 @@
 # Entity
 
+[lib/entity/entity.js:84-247](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L84-L247 "Source code on GitHub")
+
 EventSourced Entity Class.
 
 This class combines Event Sourcing and CQRS concepts with an event emitter.
@@ -25,25 +27,30 @@ is why we use Symbols to store internals.
 
 ```javascript
 class TestEntity extends Entity {
- rename(name) {
-   this.name = name;
- }
- save() {
-   this.foo = 'bar';
- }
- touch() {
- }
- myQuery() {
-   return {
-     type: 'query response',
-     name: this.name,
-     email: this.email,
-   };
- }
-}
+    rename(name) {
+      this.name = name;
+    }
+    save() {
+      this.foo = 'bar';
+    }
+    touch() {
+    }
+    myQuery() {
+      return {
+        type: 'query response',
+        name: this.name,
+        email: this.email,
+      };
+    }
+  }
+
+  // Instantiate
+  const instance = new TestEntity();
 ```
 
 ## apply
+
+[lib/entity/entity.js:218-226](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L218-L226 "Source code on GitHub")
 
 Apply an event to the entity.
 
@@ -57,6 +64,8 @@ is a snapshot event, reset the state to be an empty object.
 
 ## getMethodsOf
 
+[lib/entity/entity.js:116-121](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L116-L121 "Source code on GitHub")
+
 Get a list of commands defined on the entity.
 
 **Parameters**
@@ -65,6 +74,8 @@ Get a list of commands defined on the entity.
 
 ## getRegisteredCommandsOf
 
+[lib/entity/entity.js:128-130](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L128-L130 "Source code on GitHub")
+
 Get a list of registered commands from an entity instance.
 
 **Parameters**
@@ -72,6 +83,8 @@ Get a list of registered commands from an entity instance.
 -   `entity` **Entity** The entity being acted on.
 
 ## inspect
+
+[lib/entity/entity.js:239-246](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L239-L246 "Source code on GitHub")
 
 Inspect an Entity object.
 
@@ -84,7 +97,15 @@ important information about the entity.
 -   `target` **Entity** The entity being acted on.
 -   `entity`  
 
+**Examples**
+
+```javascript
+Entity.inspect(instance);
+```
+
 ## registerCommand
+
+[lib/entity/entity.js:165-187](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L165-L187 "Source code on GitHub")
 
 Register a command. Here we take a function and register it under the CQRS
 property in the target using the passed command name. Additionaly, the
@@ -103,7 +124,17 @@ function is wrapped so the following happens:
 -   `command` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the commmand being registered.
 -   `fn` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** The function being registered.
 
+**Examples**
+
+```javascript
+Entity.registerCommand(i, 'fix', function cmd() {
+  this.fixed = true;
+});
+```
+
 ## registerCommands
+
+[lib/entity/entity.js:137-143](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L137-L143 "Source code on GitHub")
 
 Get a list of registered commands from an entity instance.
 
@@ -112,6 +143,8 @@ Get a list of registered commands from an entity instance.
 -   `entity` **Entity** The entity being acted on.
 
 ## snapshot
+
+[lib/entity/entity.js:199-207](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L199-L207 "Source code on GitHub")
 
 Create a snapshot of an entity.
 
@@ -126,9 +159,13 @@ applied to an empty object.
 
 # conf
 
+[lib/entity/entity.js:10-10](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L10-L10 "Source code on GitHub")
+
 These symbols are used as keys for some "private" properties in Entity.
 
 # traps
+
+[lib/entity/entity.js:26-41](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L26-L41 "Source code on GitHub")
 
 We use a Proxy to trap certain operations so Entity works as expected:
 

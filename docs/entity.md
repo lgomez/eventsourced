@@ -1,6 +1,6 @@
 # Entity
 
-[lib/entity/entity.js:84-247](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L84-L247 "Source code on GitHub")
+[lib/entity/entity.js:123-311](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L123-L311 "Source code on GitHub")
 
 EventSourced Entity Class.
 
@@ -19,7 +19,7 @@ is why we use Symbols to store internals.
 
 **Parameters**
 
--   `events` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** One or more events to apply to the entity.
+-   `events` **([Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)\|[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))** One or more events to apply to the entity.
 -   `config` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Entity configuration object.
     -   `config.mappings` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** `command<->event` mapping overrides.
 
@@ -48,9 +48,11 @@ class TestEntity extends Entity {
   const instance = new TestEntity();
 ```
 
+Returns **Entity** 
+
 ## apply
 
-[lib/entity/entity.js:218-226](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L218-L226 "Source code on GitHub")
+[lib/entity/entity.js:280-288](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L280-L288 "Source code on GitHub")
 
 Apply an event to the entity.
 
@@ -62,9 +64,11 @@ is a snapshot event, reset the state to be an empty object.
 -   `event` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The event being applied.
 -   `target` **Entity** The entity being acted on.
 
+Returns **[undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)** 
+
 ## getMethodsOf
 
-[lib/entity/entity.js:116-121](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L116-L121 "Source code on GitHub")
+[lib/entity/entity.js:168-173](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L168-L173 "Source code on GitHub")
 
 Get a list of commands defined on the entity.
 
@@ -72,9 +76,11 @@ Get a list of commands defined on the entity.
 
 -   `entity` **Entity** The entity being acted on.
 
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
+
 ## getRegisteredCommandsOf
 
-[lib/entity/entity.js:128-130](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L128-L130 "Source code on GitHub")
+[lib/entity/entity.js:182-184](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L182-L184 "Source code on GitHub")
 
 Get a list of registered commands from an entity instance.
 
@@ -82,9 +88,11 @@ Get a list of registered commands from an entity instance.
 
 -   `entity` **Entity** The entity being acted on.
 
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** An array of registered command names.
+
 ## inspect
 
-[lib/entity/entity.js:239-246](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L239-L246 "Source code on GitHub")
+[lib/entity/entity.js:303-310](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L303-L310 "Source code on GitHub")
 
 Inspect an Entity object.
 
@@ -103,9 +111,11 @@ important information about the entity.
 Entity.inspect(instance);
 ```
 
+Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A simple object with various data points about the entity.
+
 ## registerCommand
 
-[lib/entity/entity.js:165-187](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L165-L187 "Source code on GitHub")
+[lib/entity/entity.js:223-245](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L223-L245 "Source code on GitHub")
 
 Register a command. Here we take a function and register it under the CQRS
 property in the target using the passed command name. Additionaly, the
@@ -132,9 +142,11 @@ Entity.registerCommand(i, 'fix', function cmd() {
 });
 ```
 
+Returns **[Null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)** 
+
 ## registerCommands
 
-[lib/entity/entity.js:137-143](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L137-L143 "Source code on GitHub")
+[lib/entity/entity.js:193-199](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L193-L199 "Source code on GitHub")
 
 Get a list of registered commands from an entity instance.
 
@@ -142,9 +154,11 @@ Get a list of registered commands from an entity instance.
 
 -   `entity` **Entity** The entity being acted on.
 
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** An array of registered command names.
+
 ## snapshot
 
-[lib/entity/entity.js:199-207](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L199-L207 "Source code on GitHub")
+[lib/entity/entity.js:259-267](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L259-L267 "Source code on GitHub")
 
 Create a snapshot of an entity.
 
@@ -157,15 +171,60 @@ applied to an empty object.
 
 -   `entity` **Entity** The entity being snapshotted.
 
+Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A simple object representation of this entity.
+
 # conf
 
-[lib/entity/entity.js:10-10](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L10-L10 "Source code on GitHub")
+[lib/entity/entity.js:38-38](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L38-L38 "Source code on GitHub")
 
 These symbols are used as keys for some "private" properties in Entity.
 
+# conf
+
+[lib/entity/entity.js:126-126](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L126-L126 "Source code on GitHub")
+
+# cqrs
+
+[lib/entity/entity.js:139-139](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L139-L139 "Source code on GitHub")
+
+# emitter
+
+[lib/entity/entity.js:136-136](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L136-L136 "Source code on GitHub")
+
+# es
+
+[lib/entity/entity.js:129-129](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L129-L129 "Source code on GitHub")
+
+# eventsourced/entity
+
+[lib/entity/entity.js:26-26](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L26-L26 "Source code on GitHub")
+
+**Meta**
+
+-   **author**: Luis G. Gomez &lt;lgomez@gmail.com>
+-   **license**: Copyright (c) 2016 Luis G. Gomez.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
 # traps
 
-[lib/entity/entity.js:26-41](https://github.com/lgomez/eventsourced/blob/cfd4f485b7833e77cd8e1bfb4b9d161e6447a2a4/lib/entity/entity.js#L26-L41 "Source code on GitHub")
+[lib/entity/entity.js:64-79](https://github.com/lgomez/eventsourced/blob/3c7ead42c99a99bcc0e4304e0ae38fd0d7b94435/lib/entity/entity.js#L64-L79 "Source code on GitHub")
 
 We use a Proxy to trap certain operations so Entity works as expected:
 

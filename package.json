@@ -14,6 +14,7 @@
     "test": "tap -R spec lib/**/*.spec.js",
     "cov": "npm t -- -R classic --cov",
     "start": "nodemon -q --exec 'npm t'",
+    "docs": "documentation -f md -o ./docs/entity.md build ./lib/entity/entity.js",
     "preversion": "eslint . && npm t",
     "postversion": "git push && git push --tags && npm publish"
   },
@@ -37,6 +38,7 @@
     "nlp_compromise": "^4.10.5"
   },
   "devDependencies": {
+    "documentation": "^4.0.0-beta2",
     "eslint": "^2.10.1",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.0",

@@ -13,6 +13,10 @@ Only available for Node 6. We will be adding distributions for older versions bu
 
 This is very much a work in progress and not ready for use. For now, see [lib/entity/entity.spec.js](lib/entity/entity.spec.js) to get an idea of what it does.
 
+## Documentation
+
+Auto-generated [API Documentation](docs/entity.md).
+
 ## Installation
 
 ```bash

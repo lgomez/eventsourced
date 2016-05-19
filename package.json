@@ -14,8 +14,8 @@
     "test": "tap -R spec lib/**/*.spec.js",
     "cov": "npm t -- -R classic --cov",
     "start": "nodemon -q --exec 'npm t'",
-    "docs": "documentation -f md -o ./docs/entity.md build ./lib/entity/entity.js",
-    "preversion": "eslint . && npm t",
+    "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js",
+    "preversion": "eslint . && npm t && npm run docs",
     "postversion": "git push && git push --tags && npm publish"
   },
   "keywords": [

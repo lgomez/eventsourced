@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - '6'
-- '5'
 env:
 - COVERALLS_REPO_TOKEN=HHAFgFwBLAt366U16CTEWwexxnEJoDMi6
 deploy:

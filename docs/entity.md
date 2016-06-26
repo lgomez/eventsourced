@@ -1,6 +1,6 @@
 # Entity
 
-[lib/entity/entity.js:112-300](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L112-L300 "Source code on GitHub")
+[lib/entity/entity.js:112-300](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L112-L300 "Source code on GitHub")
 
 EventSourced Entity Class.
 
@@ -52,7 +52,7 @@ Returns **Entity**
 
 ## apply
 
-[lib/entity/entity.js:269-277](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L269-L277 "Source code on GitHub")
+[lib/entity/entity.js:269-277](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L269-L277 "Source code on GitHub")
 
 Apply an event to the entity.
 
@@ -68,7 +68,7 @@ Returns **[undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 
 ## getMethodsOf
 
-[lib/entity/entity.js:157-162](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L157-L162 "Source code on GitHub")
+[lib/entity/entity.js:157-162](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L157-L162 "Source code on GitHub")
 
 Get a list of commands defined on the entity.
 
@@ -80,7 +80,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## getRegisteredCommandsOf
 
-[lib/entity/entity.js:171-173](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L171-L173 "Source code on GitHub")
+[lib/entity/entity.js:171-173](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L171-L173 "Source code on GitHub")
 
 Get a list of registered commands from an entity instance.
 
@@ -92,7 +92,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## inspect
 
-[lib/entity/entity.js:292-299](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L292-L299 "Source code on GitHub")
+[lib/entity/entity.js:292-299](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L292-L299 "Source code on GitHub")
 
 Inspect an Entity object.
 
@@ -115,7 +115,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## registerCommand
 
-[lib/entity/entity.js:212-234](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L212-L234 "Source code on GitHub")
+[lib/entity/entity.js:212-234](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L212-L234 "Source code on GitHub")
 
 Register a command. Here we take a function and register it under the CQRS
 property in the target using the passed command name. Additionaly, the
@@ -146,7 +146,7 @@ Returns **[Null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referen
 
 ## registerCommands
 
-[lib/entity/entity.js:182-188](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L182-L188 "Source code on GitHub")
+[lib/entity/entity.js:182-188](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L182-L188 "Source code on GitHub")
 
 Register all methods of class as commands.
 
@@ -158,7 +158,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## snapshot
 
-[lib/entity/entity.js:248-256](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L248-L256 "Source code on GitHub")
+[lib/entity/entity.js:248-256](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L248-L256 "Source code on GitHub")
 
 Create a snapshot of an entity.
 
@@ -175,23 +175,23 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 # conf
 
-[lib/entity/entity.js:115-115](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L115-L115 "Source code on GitHub")
+[lib/entity/entity.js:115-115](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L115-L115 "Source code on GitHub")
 
 # cqrs
 
-[lib/entity/entity.js:128-128](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L128-L128 "Source code on GitHub")
+[lib/entity/entity.js:128-128](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L128-L128 "Source code on GitHub")
 
 # emitter
 
-[lib/entity/entity.js:125-125](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L125-L125 "Source code on GitHub")
+[lib/entity/entity.js:125-125](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L125-L125 "Source code on GitHub")
 
 # es
 
-[lib/entity/entity.js:118-118](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L118-L118 "Source code on GitHub")
+[lib/entity/entity.js:118-118](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L118-L118 "Source code on GitHub")
 
 # eventsourced/entity
 
-[lib/entity/entity.js:26-26](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L26-L26 "Source code on GitHub")
+[lib/entity/entity.js:26-26](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L26-L26 "Source code on GitHub")
 
 **Meta**
 
@@ -218,7 +218,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 # traps
 
-[lib/entity/entity.js:53-68](https://github.com/lgomez/eventsourced/blob/492ae0521bde5c7d3c3d321bea4c1aee069372ac/lib/entity/entity.js#L53-L68 "Source code on GitHub")
+[lib/entity/entity.js:53-68](https://github.com/lgomez/eventsourced/blob/0181621023c74b4a3ee65e0a6e0b16ea200eeeca/lib/entity/entity.js#L53-L68 "Source code on GitHub")
 
 We use a Proxy to trap certain operations so Entity works as expected:
 

@@ -1,9 +1,14 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
+- '5'
 env:
-  - COVERALLS_REPO_TOKEN=HHAFgFwBLAt366U16CTEWwexxnEJoDMi6
-# deploy:
-#   provider: npm
-#   email: "YOUR_EMAIL_ADDRESS"
-#   api_key: "YOUR_API_KEY"
+- COVERALLS_REPO_TOKEN=HHAFgFwBLAt366U16CTEWwexxnEJoDMi6
+deploy:
+  provider: npm
+  email: lgomez@gmail.com
+  api_key:
+    secure: SjJFjXnMtqrprbnCVkxfHONivoBl2Of0Zldu+eAlFHxSwg0T+41GPxzOR/EuLCCWCjom51pb3s5fIE69Y1VnnAdZ47AG+Yh3bOHFR5+hCTdLvN7e/+gX2UUz5ITolph7Um0oCvNeJx5et/Zu1sOn5p2I3qHV0Xxgsvdls23SaiXxWCPSdZKN9lXCWMpmdANyN0D3IJNAMYVP2QlgxHtAAOtODeV3ZDcXC/1ugOu4M4C4Zst5T3ry1kM0oVB44TqQRxUEGvMUBiDC4HEINqUJJaEG7Ihgh73XWvmIBiyPhRbA4TuhPRjk/GcCcIgyxPzz+NViUDGYhBKJ8IGPtKIbZKqFT0EyqCmj9Bik6OtlcJ9zJ9us9MOm3jwuAeg4cPVgUBIh69A9akQS8s78qOc0GhPCj+GePPq57dFzwfZtCevcRMQJK8bqYt7UpLOmocpIPIxtFKUjleg3M59h/D4AKWnkeCmBEoF8sUkefYmT/F/3rpdgwPvKmSQhYDkeOeRop1xmfJ3s7g6Sssw4hsMZ0jsTtgRDPv6XY2uu6gMJgbqua3pnp22alhW6BbTqy4AQaKuwBiR33NZV7taJN2XFv7+zu2IDCRBwiYnBAAzFwZ5wuSdq2jNb4Uf2ImqWs6D24vT154PWpiNrIPKRUQ9bGx00Ysk0mNZSmyjMJZr6xuk=
+  on:
+    tags: true
+    repo: lgomez/eventsourced

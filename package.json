@@ -15,7 +15,7 @@
     "test": "tap -R spec lib/**/*.spec.js",
     "linter": "eslint --ignore-pattern dist .",
     "cov": "npm t -- -R classic --cov",
-    "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js",
+    "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js && git add docs/* && git ci -m 'Updated documentation' docs/*",
     "preversion": "npm run linter && npm t && npm run docs",
     "postversion": "git push && git push --tags"
   },

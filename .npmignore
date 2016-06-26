@@ -9,4 +9,5 @@ test
 README.md
 examples
 docs
+docs/**/*
 scripts

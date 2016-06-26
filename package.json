@@ -1,6 +1,6 @@
 {
   "name": "eventsourced",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "An Event Sourcing library for Node using ES6, Immutable, NLP and some CQRS.",
   "main": "index.js",
   "directories": {

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "nodemon -q --exec 'npm t'",
-    "test": "tap -R spec ./spec.js",
+    "test": "tap -R spec ./test.js",
     "cov": "npm t -- -R classic --cov",
     "docs": "documentation -g -f md -o ./API.md build ./lib/entity/entity.js && git add ./API.md && git ci -m 'Updated documentation' ./API.md",
     "linter": "standard --verbose | snazzy",

@@ -1,13 +1,9 @@
 node_modules
 .nyc_output
 npm-debug.log
-test
-.eslintrc
 .gitignore
 .npmignore
 .travis.yml
 README.md
-examples
-docs
-docs/**/*
-scripts
+API.md
+spec.js

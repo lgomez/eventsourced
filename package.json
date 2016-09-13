@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git@github.com:lgomez/eventsourced.git"
   },
+  "bugs": {
+    "url": "https://github.com/lgomez/eventsourced/issues"
+  },
   "scripts": {
     "start": "nodemon -q --exec 'npm t'",
     "test": "tap -R spec lib/**/*.spec.js",

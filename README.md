@@ -18,7 +18,7 @@ This is very much a work in progress and not ready for use. For now, see [lib/en
 
 ## Documentation
 
-Auto-generated [API Documentation](docs/entity.md).
+Auto-generated [API Documentation](API.md).
 
 ## Installation
 

@@ -17,7 +17,7 @@
     "start": "nodemon -q --exec 'npm t'",
     "test": "tap -R spec lib/**/*.spec.js",
     "cov": "npm t -- -R classic --cov",
-    "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js && git add docs/* && git ci -m 'Updated documentation' docs/*",
+    "docs": "documentation -g -f md -o ./API.md build ./lib/entity/entity.js && git add ./API.md && git ci -m 'Updated documentation' ./API.md",
     "linter": "standard --verbose | snazzy",
     "preversion": "npm run linter && npm t && npm run docs",
     "postversion": "git push --follow-tags"

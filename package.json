@@ -36,18 +36,15 @@
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
   "license": "MIT",
   "dependencies": {
-    "documentation": "^4.0.0-beta9",
     "immutable": "^3.8.1",
     "immutablediff": "^0.4.3",
     "immutablepatch": "^0.2.2",
-    "nlp_compromise": "^4.12.1",
-    "nodemon": "^1.10.2",
-    "tap": "^5.8.0"
+    "nlp_compromise": "^6.5.0"
   },
   "devDependencies": {
-    "documentation": "^4.0.0-beta2",
-    "nodemon": "^1.9.2",
+    "documentation": "^4.0.0-beta10",
+    "nodemon": "^1.10.2",
     "standard": "^8.0.0",
-    "tap": "^5.7.1"
+    "tap": "^7.1.2"
   }
 }

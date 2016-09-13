@@ -13,11 +13,10 @@
   "scripts": {
     "start": "nodemon -q --exec 'npm t'",
     "test": "tap -R spec lib/**/*.spec.js",
-    "linter": "eslint --ignore-pattern dist .",
     "cov": "npm t -- -R classic --cov",
     "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js && git add docs/* && git ci -m 'Updated documentation' docs/*",
-    "preversion": "npm run linter && npm t && npm run docs",
     "postversion": "git push && git push --tags"
+    "preversion": "standard && npm t && npm run docs",
   },
   "keywords": [
     "event sourcing",
@@ -33,17 +32,18 @@
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
   "license": "MIT",
   "dependencies": {
+    "documentation": "^4.0.0-beta9",
     "immutable": "^3.8.1",
-    "immutablediff": "^0.4.2",
+    "immutablediff": "^0.4.3",
     "immutablepatch": "^0.2.2",
-    "nlp_compromise": "^4.10.5"
+    "nlp_compromise": "^4.12.1",
+    "nodemon": "^1.10.2",
+    "tap": "^5.8.0"
   },
   "devDependencies": {
     "documentation": "^4.0.0-beta2",
-    "eslint": "^2.10.1",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
     "nodemon": "^1.9.2",
+    "standard": "^8.0.0",
     "tap": "^5.7.1"
   }
 }

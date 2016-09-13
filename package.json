@@ -18,7 +18,8 @@
     "test": "tap -R spec lib/**/*.spec.js",
     "cov": "npm t -- -R classic --cov",
     "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js && git add docs/* && git ci -m 'Updated documentation' docs/*",
-    "preversion": "standard && npm t && npm run docs",
+    "lint": "standard",
+    "preversion": "npm run lint && npm t && npm run docs",
     "postversion": "git push --follow-tags"
   },
   "keywords": [

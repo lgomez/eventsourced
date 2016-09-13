@@ -11,3 +11,5 @@ deploy:
   on:
     tags: true
     repo: lgomez/eventsourced
+notifications:
+  email: false

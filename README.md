@@ -1,12 +1,11 @@
-# Event Sourced
+# eventsourced
 
 [![Build Status](https://travis-ci.org/lgomez/eventsourced.svg?branch=master)](https://travis-ci.org/lgomez/eventsourced)
 [![Coverage Status](https://coveralls.io/repos/github/lgomez/eventsourced/badge.svg?branch=master)](https://coveralls.io/github/lgomez/eventsourced?branch=master)
 [![Dependency Status](https://david-dm.org/lgomez/eventsourced.svg)](https://david-dm.org/lgomez/eventsourced)
 [![npm version](https://badge.fury.io/js/eventsourced.svg)](https://badge.fury.io/js/eventsourced)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-An Event Sourcing library for Node using ES6, Immutable, NLP and some CQRS.
+Event sourcing JavaScript entity class
 
 Combining Event Sourcing and CQRS concepts in one Entity class for node using ES6 Symbols, Proxies, Immutable and Event Emitter. One of the main goals with the Entity class is to create instances that are as clean as possible and allow users to set and get attributes as they normally would in JavaScript while automatically maintaining state, event history, etc.
 

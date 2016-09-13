@@ -42,9 +42,10 @@
     "nlp_compromise": "^6.5.0"
   },
   "devDependencies": {
-    "documentation": "^4.0.0-beta10",
-    "nodemon": "^1.10.2",
-    "standard": "^8.0.0",
-    "tap": "^7.1.2"
+    "documentation": "latest",
+    "nodemon": "latest",
+    "snazzy": "latest",
+    "standard": "latest",
+    "tap": "latest"
   }
 }

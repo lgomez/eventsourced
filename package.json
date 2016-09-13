@@ -15,8 +15,8 @@
     "test": "tap -R spec lib/**/*.spec.js",
     "cov": "npm t -- -R classic --cov",
     "docs": "documentation -g -f md -o ./docs/entity.md build ./lib/entity/entity.js && git add docs/* && git ci -m 'Updated documentation' docs/*",
-    "postversion": "git push && git push --tags"
     "preversion": "standard && npm t && npm run docs",
+    "postversion": "git push --follow-tags"
   },
   "keywords": [
     "event sourcing",

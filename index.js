@@ -1,8 +1,7 @@
 /**
  * @module eventsourced/entity
  * @author Luis G. Gomez <lgomez@gmail.com>
- * @license
- * Copyright (c) 2016 Luis G. Gomez.
+ * @license Copyright (c) 2016 Luis G. Gomez.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -41,8 +40,8 @@ const cqrs = Symbol()
 /**
  * We use a Proxy to trap certain operations so Entity works as expected:
  *
- * 1. We trap every get operation to check if the operation refers to a command
- *    and, if so, we route it to the registered CQRS commands.
+ * 1. We trap every get operation to check if it refers to a command and, if so,
+ *    we route it to the registered CQRS commands.
  * 2. We trap set operations to ensure state is kept to par with the entity
  *    instance's data.
  *

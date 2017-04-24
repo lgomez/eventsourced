@@ -1,15 +1,13 @@
 {
-  "name": "eventsourced",
+  "name": "@apim/eventsourced",
   "version": "1.0.17",
+  "private": false,
   "description": "Event sourcing JavaScript entity class",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:lgomez/eventsourced.git"
-  },
+  "repository": "git@github.com:apim-io/eventsourced.git",
   "bugs": {
     "url": "https://github.com/lgomez/eventsourced/issues"
   },

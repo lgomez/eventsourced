@@ -32,10 +32,10 @@ const patch = require('immutablepatch')
  * These symbols are used as keys for some "private" properties in Entity.
  * @ignore
  */
-const conf = Symbol()
-const es = Symbol()
-const emitter = Symbol()
-const cqrs = Symbol()
+const conf = Symbol('conf')
+const es = Symbol('es')
+const emitter = Symbol('emitter')
+const cqrs = Symbol('cqrs')
 
 /**
  * We use a Proxy to trap certain operations so Entity works as expected:

@@ -1,6 +1,6 @@
 {
   "name": "@apim/eventsourced",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "private": false,
   "description": "Event sourcing JavaScript entity class",
   "main": "index.js",
